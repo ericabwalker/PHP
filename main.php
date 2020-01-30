@@ -5,10 +5,5 @@ $array = array("first_name"=>"Erica", "nickname"=>"America", "language"=>"PHP", 
 
 $result = $array['int_two'] * $array['int_one'];
 
-echo "The result of ";
-echo $array['int_two'];
-echo " * ";
-echo $array['int_one'];
-echo " is: ";
-echo $result;
+echo 'The result of ' . $array['int_two'] . ' * ' . $array['int_one'] . ' is: ' . $result;
 ?>
