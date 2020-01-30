@@ -2,18 +2,17 @@
 $numbers = range(0, 100, 3);
 
 foreach ($numbers as $number) {
-    switch ($number) {
-        case 3:
-            echo "Three ";
-            break;
-        case 9:
-            echo "Nine Nine Nine ";
-            break;
-        case 15:
-            echo "Fifteen Fifteen Fifteen Fifteen Fifteen ";
-            break;
-        default:
-            echo $number . " ";
-    }
+    if ($number === reset($numbers)) {
+        echo "First number | ";
+    } elseif ($number % 10 == 0) {
+        echo "$number is a round number | ";
+    } elseif ($number % 7 == 0) {
+        $result = $number / 7;
+        echo "Sevens are lucky, this number has $result | ";
+    } elseif ($number === end($numbers)) {
+        echo "Last number ";
+    } else {
+        echo $number . " | ";
+    }   
 }
 ?>
