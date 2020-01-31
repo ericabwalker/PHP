@@ -1,17 +1,24 @@
 <?php
 $numbers = range(0, 100, 3);
 
-for ($i = 0; $i < count($numbers); $i++) {
-    if ($numbers[$i] === reset($numbers)) {
-        echo "First number | ";
-    } elseif ($numbers[$i] % 10 == 0) {
-        echo "$numbers[$i] is a round number | ";
-    } elseif ($numbers[$i] % 7 == 0) {
-        $result = $numbers[$i] / 7;
-        echo "Sevens are lucky, this number has $result | ";
-    } elseif ($numbers[$i] === end($numbers)) {
-        echo "Last number ";
-    } else {
-        echo $numbers[$i] . " | ";
-    } 
+$i = 0;
+while ($i < count($numbers)) {
+    switch ($numbers[$i]) {
+        case 3:
+            echo "Three ";
+            $i++;
+            break;
+        case 9:
+            echo "Nine Nine Nine ";
+            $i++;
+            break;
+        case 15:
+            echo "Fifteen Fifteen Fifteen Fifteen Fifteen ";
+            $i++;
+            break;
+        default:
+            echo $numbers[$i] . " ";
+            $i++;
+    }
 }
+?>
