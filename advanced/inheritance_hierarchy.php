@@ -75,6 +75,7 @@ class Workstation extends Computer {
     }
 
     public function get_model($model) {
+        Computer::get_model($model);
         echo "this is a child class: " . $model;
     }
 }
