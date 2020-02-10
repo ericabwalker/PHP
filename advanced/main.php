@@ -1,5 +1,6 @@
 <?php 
 include 'inheritance_hierarchy.php';
+include 'namespace.php';
 
 $computer1 = new Computer();
 $computer1->get_model("computer model ");
@@ -62,4 +63,13 @@ $databaseserver1 = new DatabaseServer();
 $databaseserver1->get_query_language(" MySQL ");
 $databaseserver1->get_database_application("Sabre ");
 
+
+use Name\Computer as NamespaceComputer;
+$computer2 = new NamespaceComputer();
+$computer2->test_namespace("HELLO ");
+
+
+use Name\Mac as NamespaceMac;
+$macbook2 = new NamespaceMac();
+$macbook2->mac_namespace("I am a namespaced MacBook! ");
 ?>
