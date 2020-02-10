@@ -2,10 +2,10 @@
 include 'inheritance_hierarchy.php';
 
 $computer1 = new Computer();
-$computer1->get_model("test ");
+$computer1->get_model("computer model ");
 $computer1->print_serial("123456789abc ");
 $computer1->get_storage_capacity("156GB ");
-$computer1->print_nickname("bob ");
+$computer1->print_nickname("Bob Mackie ");
 $computer1->get_users(array('Sarah ', 'James ', 'Bill '));
 $computer1->get_RAM("3289328 ");
 $computer1->get_year("2019 ");
@@ -31,6 +31,7 @@ $macbook1->has_touchID(false);
 echo " ";
 $macbook1->is_justin_long(true);
 echo " ";
+$macbook1->get_model("MacBook Pro ");
 
 
 $pc1 = new PC();

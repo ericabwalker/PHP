@@ -73,6 +73,10 @@ class Workstation extends Computer {
     public function get_operating_system($operating_sys) {
         echo $operating_sys;
     }
+
+    public function get_model($model) {
+        echo "this is a child class: " . $model;
+    }
 }
 
 class Mac extends Workstation {
