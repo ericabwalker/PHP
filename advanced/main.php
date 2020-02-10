@@ -62,6 +62,7 @@ $webserver1->print_load_limit("12GB ");
 $databaseserver1 = new DatabaseServer();
 $databaseserver1->get_query_language(" MySQL ");
 $databaseserver1->get_database_application("Sabre ");
+$databaseserver1->print_location("This is my location ");
 
 
 use Name\Computer as NamespaceComputer;

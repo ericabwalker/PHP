@@ -1,5 +1,10 @@
 <?php 
 
+interface DatabaseServerInterface {
+    public function get_query_language($query_language);
+    public function get_database_application($database_application);
+}
+
 class Computer {
     public $model;
     private $serial_number; 
@@ -201,7 +206,7 @@ class WebServer extends Server {
     }
 }
 
-class DatabaseServer extends Server {
+class DatabaseServer extends Server implements DatabaseServerInterface {
     public $query_language;
     public $database_application;
 
