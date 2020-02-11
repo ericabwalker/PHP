@@ -36,8 +36,9 @@ $macbook1->model_trait("MacBook ");
 
 
 $pc1 = new PC();
-$pc1->get_manufacturer("Dell ");
-$pc1->is_john_hodgman(true);
+$pc1->pc_closures($pc_manufacturer, "Dell ");
+$pc1->pc_closures($pc_hodgman, true);
+$pc1->pc_closures($pc_keyboard_color, "white");
 echo " ";
 $pc1->num_graphics_cards(3);
 echo " ";
@@ -73,4 +74,7 @@ $computer2->test_namespace("HELLO ");
 use Name\Mac as NamespaceMac;
 $macbook2 = new NamespaceMac();
 $macbook2->mac_namespace("I am a namespaced MacBook! ");
+
+echo PHP_EOL;
+
 ?>

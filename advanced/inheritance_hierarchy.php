@@ -12,6 +12,20 @@ trait get_Model_Trait {
     }
 }
 
+$pc_manufacturer = function($value) {
+    return $value . " is the manufacturer. ";
+};
+
+$pc_hodgman = function($value) {
+    return $value . " <--- If that is a 1 then this pc IS John Hodgman. ";
+};
+
+$pc_keyboard_color = function($value) {
+    return "This PC has a(n) $value keyboard. ";
+};
+
+
+
 class Computer {
     public $model;
     private $serial_number; 
@@ -129,12 +143,8 @@ class PC extends Workstation {
     public $manufacturer; 
     public $is_john_hodgman; 
 
-    public function get_manufacturer($manufacturer) {
-        echo $manufacturer;
-    }
-
-    public function is_john_hodgman($is_john_hodgman) {
-        echo $is_john_hodgman;
+    public function pc_closures(Closure $type, $first) {
+        echo $type($first);
     }
 
     use get_Model_Trait;
@@ -226,6 +236,9 @@ class DatabaseServer extends Server implements DatabaseServerInterface {
 
     public function get_database_application($database_application) {
         echo $database_application;
-    }
+    } 
+
 }
+
 ?>
+
