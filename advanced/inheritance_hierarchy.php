@@ -5,6 +5,13 @@ interface DatabaseServerInterface {
     public function get_database_application($database_application);
 }
 
+trait get_Model_Trait {
+    public function model_trait($model) {
+        parent::get_model($model);
+        echo "That was the model, via a trait. ";
+    }
+}
+
 class Computer {
     public $model;
     private $serial_number; 
@@ -80,8 +87,7 @@ class Workstation extends Computer {
     }
 
     public function get_model($model) {
-        Computer::get_model($model);
-        echo "this is a child class: " . $model;
+        echo $model . " ";
     }
 }
 
@@ -115,6 +121,8 @@ class Mac extends Workstation {
     public function is_justin_long($is_justin_long) {
         echo $is_justin_long;
     }
+
+    use get_Model_Trait;
 }
 
 class PC extends Workstation {
@@ -128,6 +136,8 @@ class PC extends Workstation {
     public function is_john_hodgman($is_john_hodgman) {
         echo $is_john_hodgman;
     }
+
+    use get_Model_Trait;
 }
 
 class Server extends Computer {
@@ -218,3 +228,4 @@ class DatabaseServer extends Server implements DatabaseServerInterface {
         echo $database_application;
     }
 }
+?>

@@ -32,7 +32,7 @@ $macbook1->has_touchID(false);
 echo " ";
 $macbook1->is_justin_long(true);
 echo " ";
-$macbook1->get_model("MacBook Pro ");
+$macbook1->model_trait("MacBook ");
 
 
 $pc1 = new PC();
@@ -41,6 +41,7 @@ $pc1->is_john_hodgman(true);
 echo " ";
 $pc1->num_graphics_cards(3);
 echo " ";
+$pc1->model_trait("MODEL");
 
 
 $server1 = new Server();
@@ -49,7 +50,6 @@ $server1->print_clients(array("Sally", " Jesse "));
 $server1->print_ssh(array("ssh", "key "));
 $server1->print_location("California ");
 $server1->print_last_request("GET ");
-
 
 
 $webserver1 = new WebServer();
